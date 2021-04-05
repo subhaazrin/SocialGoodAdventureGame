@@ -1,0 +1,63 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://SocialGoodAdventure.gd" type="Script" id=1]
+
+[node name="SocialGoodAdventure" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 613.0
+margin_bottom = 336.0
+color = Color( 0.847059, 0.560784, 0.560784, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text Area" type="RichTextLabel" parent="Background"]
+margin_left = 150.0
+margin_top = 34.0
+margin_right = 472.0
+margin_bottom = 266.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="."]
+margin_left = 123.0
+margin_top = 299.0
+margin_right = 534.0
+margin_bottom = 326.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 190.0
+margin_top = -39.0
+margin_right = 418.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Commands" type="ColorRect" parent="."]
+margin_left = 184.0
+margin_top = 10.0
+margin_right = 436.0
+margin_bottom = 51.0
+color = Color( 0.760784, 0.25098, 0.25098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Commands"]
+margin_left = 65.0
+margin_top = 12.0
+margin_right = 193.0
+margin_bottom = 26.0
+text = "Go to, Check, Stop"
+[connection signal="text_entered" from="LineEdit" to="." method="_on_LineEdit_text_entered"]
